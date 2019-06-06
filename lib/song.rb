@@ -25,7 +25,7 @@ class Song
     # binding.pry
     song_split = filename.split(" - ")
     new_song = self.new(song_split[1])                      # expect(new_instance.name).to eq('Black or White')
-    artist = Artist.find_or_create_by_name(song_split[0])   #
+    artist = Artist.find_or_create_by_name(song_split[0])   # this is separating the song and artist from each other
     
 # assocaitees new song instance with the artist from the filename
     new_song.artist = artist                                #=> <Artist:0x00000000022bc9b8 @name="Michael Jackson", @songs=[]>
