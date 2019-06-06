@@ -22,7 +22,7 @@ class Artist
   
   def initialize(name)
     @name = name
-    @@all << self
+    @@all << self  # needed for expect(Artist.all.size).to eq(1) in song_spec
     @songs = []
   end
   
