@@ -33,6 +33,13 @@ class Song
     new_song                                                # Needs to return the song 
     
   end
- 
   
+# filename = ['Michael Jackson - Black or White - pop.mp3']
+  def new_by_filename(filename)
+    binding.pry
+    song = self.new(filename)    # create an instance with self.new
+    song.name = filename.split(" - ")[1]
+    song
+  end
+
 end

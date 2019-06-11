@@ -26,7 +26,7 @@ class MP3Importer
     # binding.pry
   # Deletes every element of self for which block evaluates to true
   # needed the "." and ".." because of the output had them both and needed to be deleteed
-    
+
   end
   
 =begin
@@ -39,10 +39,7 @@ class MP3Importer
 =end
   
   def import
-# binding.pry
-    self.files.each do |file|
-      Song.new_by_filename(file)
-   end
+    files.each {|filename| Song.new_by_filename(filename)}
   end
   
     
